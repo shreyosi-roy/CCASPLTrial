@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/exe_drawerLayout"
+    tools:context=".Executive.ExecutiveHome">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exe_home_guidex1"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.08"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exe_home_guidex2"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.23"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exe_home_guidex3"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.38"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exe_home_guidex4"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.53"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exe_home_guidex5"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.68"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exe_home_guidex6"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.93"/>
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/toolbar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/exe_home_guidex1"
+            android:background="@color/colourMain"
+            app:title="@string/app_name"
+            app:titleTextColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/assigndate"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/exe_home_guidex1"
+            app:layout_constraintBottom_toTopOf="@id/exe_home_guidex2"
+            android:textSize="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:drawableRight="@drawable/calendar_icon"
+            android:hint="Select assigning date"/>
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/exe_home_relieverSpinner"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/exe_home_guidex2"
+            app:layout_constraintBottom_toTopOf="@id/exe_home_guidex3"
+            app:hintText="Select Reliever"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/exe_home_siteSpinner"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/exe_home_guidex4"
+            app:layout_constraintTop_toBottomOf="@id/exe_home_guidex3"
+            app:hintText="Select Site"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/exe_home_empSpinner"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/exe_home_guidex5"
+            app:layout_constraintTop_toBottomOf="@id/exe_home_guidex4"
+            app:hintText="Select Regular employee to be substituted"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/assign"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/exe_home_guidex5"
+            app:layout_constraintBottom_toTopOf="@id/exe_home_guidex6"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintHeight_percent="0.09"
+            android:text="Assign Reliever"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:background="@color/colourMain" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/temp_reliever_data_frag"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/exe_home_guidex1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:elevation="3dp"/>
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/exehome_progress"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="?android:attr/progressBarStyleLarge"
+            android:visibility="gone"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/exe_nav_View"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/exe_nav_header"
+        app:menu="@menu/exe_nav_menu"
+        android:background="#DCECFA"/>
+
+</android.support.v4.widget.DrawerLayout>

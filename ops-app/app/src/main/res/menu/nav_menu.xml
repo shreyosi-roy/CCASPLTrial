@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/profile"
+            android:title="Profile"/>
+
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/materialRequired"
+            android:title="Materials Required"/>
+
+    </group>
+    <group
+        android:id="@+id/group6"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/materialDelivered"
+            android:title="Materials Delivered"/>
+
+    </group>
+
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/materialIssues"
+            android:title="Materials Issues"/>
+
+    </group>
+
+    <group
+        android:id="@+id/group4"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/training"
+            android:title="Training">
+
+            <menu>
+
+                <item
+                    android:id="@+id/video"
+                    android:title="Video Training"/>
+
+                <item
+                    android:id="@+id/tracker"
+                    android:title="Certification"/>
+
+
+            </menu>
+        </item>
+
+    </group>
+
+    <group
+        android:id="@+id/group5"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/logout"
+            android:title="Logout"/>
+
+    </group>
+
+</menu>

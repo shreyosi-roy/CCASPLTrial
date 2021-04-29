@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Executive.TempRelieverDataEntry">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DCECFA"
+        android:clickable="true">
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tempreliever_guidex1"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.85"/>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tempreliever_guidex1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="25dp"
+                    android:text="Enter temporary reliever data"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:id="@+id/name_layout">
+
+                    <android.support.constraint.Guideline
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name_layout_guidey1"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="0dp"
+                        app:layout_constraintGuide_percent="0.3"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name_label"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/name_layout_guidey1"
+                        android:text="Name:"
+                        android:textSize="18dp"
+                        android:paddingLeft="10dp"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tempreliever_name"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/name_label"
+                        android:backgroundTint="@color/colourMain"
+                        android:layout_marginRight="8dp"
+                        android:textSize="18dp"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:id="@+id/phno_layout">
+
+                    <android.support.constraint.Guideline
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/phno_layout_guidey1"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="0dp"
+                        app:layout_constraintGuide_percent="0.3"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/phno_label"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/phno_layout_guidey1"
+                        android:text="Phone No.:"
+                        android:textSize="18dp"
+                        android:paddingLeft="10dp"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tempreliever_phno"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/phno_label"
+                        android:backgroundTint="@color/colourMain"
+                        android:layout_marginRight="8dp"
+                        android:textSize="18dp"
+                        android:inputType="number"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:id="@+id/altno_layout">
+
+                    <android.support.constraint.Guideline
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/altno_layout_guidey1"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="0dp"
+                        app:layout_constraintGuide_percent="0.3"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/altno_label"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/altno_layout_guidey1"
+                        android:text="Alternate No.:"
+                        android:textSize="18dp"
+                        android:paddingLeft="10dp"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tempreliever_altno"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/altno_label"
+                        android:backgroundTint="@color/colourMain"
+                        android:layout_marginRight="8dp"
+                        android:textSize="18dp"
+                        android:inputType="number"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:id="@+id/city_layout">
+
+                    <android.support.constraint.Guideline
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/city_layout_guidey1"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="0dp"
+                        app:layout_constraintGuide_percent="0.3"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/city_label"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/city_layout_guidey1"
+                        android:text="City:"
+                        android:textSize="18dp"
+                        android:paddingLeft="10dp"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tempreliever_city"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/city_label"
+                        android:backgroundTint="@color/colourMain"
+                        android:layout_marginRight="8dp"
+                        android:textSize="18dp"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:id="@+id/state_layout">
+
+                    <android.support.constraint.Guideline
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/state_layout_guidey1"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="0dp"
+                        app:layout_constraintGuide_percent="0.3"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/state_label"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/state_layout_guidey1"
+                        android:text="State:"
+                        android:textSize="18dp"
+                        android:paddingLeft="10dp"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tempreliever_state"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/state_label"
+                        android:backgroundTint="@color/colourMain"
+                        android:layout_marginRight="8dp"
+                        android:textSize="18dp"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:id="@+id/country_layout">
+
+                    <android.support.constraint.Guideline
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/country_layout_guidey1"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="0dp"
+                        app:layout_constraintGuide_percent="0.3"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/country_label"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/country_layout_guidey1"
+                        android:text="Country:"
+                        android:textSize="18dp"
+                        android:paddingLeft="10dp"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tempreliever_country"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/country_label"
+                        android:backgroundTint="@color/colourMain"
+                        android:layout_marginRight="8dp"
+                        android:textSize="18dp"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:id="@+id/email_layout">
+
+                    <android.support.constraint.Guideline
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/email_layout_guidey1"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="0dp"
+                        app:layout_constraintGuide_percent="0.3"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/email_label"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/email_layout_guidey1"
+                        android:text="Email:"
+                        android:textSize="18dp"
+                        android:paddingLeft="10dp"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tempreliever_email"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/email_label"
+                        android:backgroundTint="@color/colourMain"
+                        android:layout_marginRight="8dp"
+                        android:textSize="18dp"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:id="@+id/addr_layout">
+
+                    <android.support.constraint.Guideline
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addr_layout_guidey1"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="0dp"
+                        app:layout_constraintGuide_percent="0.3"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addr_label"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/addr_layout_guidey1"
+                        android:text="Present address:"
+                        android:textSize="18dp"
+                        android:paddingLeft="10dp"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tempreliever_addr"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/addr_label"
+                        android:backgroundTint="@color/colourMain"
+                        android:layout_marginRight="8dp"
+                        android:textSize="18dp"
+                        android:inputType="textMultiLine"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/tempreliever_submit"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tempreliever_cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tempreliever_guidex1"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintHeight_percent="0.08"
+            android:background="@color/colourMain"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:text="Submit"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/tempreliever_cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tempreliever_submit"
+            app:layout_constraintTop_toBottomOf="@id/tempreliever_guidex1"
+            app:layout_constraintHeight_percent="0.08"
+            app:layout_constraintWidth_percent="0.3"
+            android:background="@color/colourMain"
+            android:text="Cancel"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

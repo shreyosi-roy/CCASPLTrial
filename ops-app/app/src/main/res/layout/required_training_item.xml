@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reqTrainItem_guidey1"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/training_checkbox"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/reqTrainItem_guidey1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="5dp"/>
+
+    <LinearLayout
+        android:layout_width="1dp"
+        android:layout_height="80dp"
+        app:layout_constraintLeft_toLeftOf="@id/reqTrainItem_guidey1"
+        app:layout_constraintRight_toRightOf="@id/reqTrainItem_guidey1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#909090"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/training_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/reqTrainItem_guidey1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+
+</android.support.constraint.ConstraintLayout>

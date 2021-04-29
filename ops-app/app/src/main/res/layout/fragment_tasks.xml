@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TasksFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/regular_layout"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tfrguide3">
+
+            <android.support.constraint.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tfrguide1"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="0dp"
+                app:layout_constraintGuide_percent="0.1"/>
+
+            <android.support.constraint.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tfrguide2"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="0dp"
+                app:layout_constraintGuide_percent="0.2"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/date"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tfrguide1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHeight_percent="0.08"
+                android:hint="Date"
+                android:textSize="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:drawableRight="@drawable/calendar_icon"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/currentDate_layout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tfrguide1"
+                app:layout_constraintBottom_toTopOf="@id/tfrguide2"
+                android:background="@color/colourSecond">
+
+                <android.support.constraint.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/current_guidey1"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="0dp"
+                    app:layout_constraintGuide_percent="0.1"/>
+
+                <android.support.constraint.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/current_guidey2"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="0dp"
+                    app:layout_constraintGuide_percent="0.7"/>
+
+                <android.support.constraint.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/current_guidey3"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="0dp"
+                    app:layout_constraintGuide_percent="0.9"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="@id/current_guidey1"
+                    app:layout_constraintRight_toRightOf="@id/current_guidey1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="#909090"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/task_name_heading"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/current_guidey1"
+                    app:layout_constraintRight_toLeftOf="@id/current_guidey2"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:text="Name"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="@id/current_guidey2"
+                    app:layout_constraintRight_toRightOf="@id/current_guidey2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="#909090"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/task_time_heading"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/current_guidey2"
+                    app:layout_constraintRight_toLeftOf="@id/current_guidey3"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:text="Time"
+                    android:textSize="20dp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="@id/current_guidey3"
+                    app:layout_constraintRight_toRightOf="@id/current_guidey3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="#909090"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sop_heading"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/current_guidey3"
+                    android:textSize="18dp"
+                    android:text="SOP"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/otherDate_layout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tfrguide1"
+                app:layout_constraintBottom_toTopOf="@id/tfrguide2"
+                android:background="@color/colourSecond"
+                android:visibility="gone">
+
+                <android.support.constraint.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/other_guidey1"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="0dp"
+                    app:layout_constraintGuide_percent="0.7"/>
+
+                <android.support.constraint.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/other_guidey2"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="0dp"
+                    app:layout_constraintGuide_percent="0.9"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/task_name_heading2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/other_guidey1"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:text="Name"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="@id/other_guidey1"
+                    app:layout_constraintRight_toRightOf="@id/other_guidey1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="#909090"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/task_time_heading2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/other_guidey1"
+                    app:layout_constraintRight_toLeftOf="@id/other_guidey2"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:text="Time"
+                    android:textSize="20dp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="@id/other_guidey2"
+                    app:layout_constraintRight_toRightOf="@id/other_guidey2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="#909090"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sop_heading2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/other_guidey2"
+                    android:textSize="18dp"
+                    android:text="SOP"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <ListView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/taskListView"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tfrguide2"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/tfr_extraWork_frag"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tfrguide2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintWidth_percent="0.8"
+                app:layout_constraintHeight_percent="0.5"
+                android:elevation="3dp"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/reliever_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tfrguide3"
+            android:visibility="gone">
+
+            <android.support.constraint.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tfrguide4"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="0dp"
+                app:layout_constraintGuide_percent="0.1"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/currentDate_layout2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tfrguide4"
+                android:background="@color/colourSecond">
+
+                <android.support.constraint.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/current_guideyA"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="0dp"
+                    app:layout_constraintGuide_percent="0.1"/>
+
+                <android.support.constraint.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/current_guideyB"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="0dp"
+                    app:layout_constraintGuide_percent="0.7"/>
+
+                <android.support.constraint.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/current_guideyC"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="0dp"
+                    app:layout_constraintGuide_percent="0.9"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="@id/current_guideyA"
+                    app:layout_constraintRight_toRightOf="@id/current_guideyA"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="#909090"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/task_name_heading_reliever"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/current_guideyA"
+                    app:layout_constraintRight_toLeftOf="@id/current_guideyB"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:text="Name"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="@id/current_guideyB"
+                    app:layout_constraintRight_toRightOf="@id/current_guideyB"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="#909090"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/task_time_heading_reliever"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/current_guideyB"
+                    app:layout_constraintRight_toLeftOf="@id/current_guideyC"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:text="Time"
+                    android:textSize="20dp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="@id/current_guideyC"
+                    app:layout_constraintRight_toRightOf="@id/current_guideyC"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="#909090"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sop_heading_reliever"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/current_guideyC"
+                    android:textSize="18dp"
+                    android:text="SOP"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <ListView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/taskListView2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tfrguide4"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/tfr_extraWork_frag2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tfrguide4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintWidth_percent="0.8"
+                app:layout_constraintHeight_percent="0.5"
+                android:elevation="3dp"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tfrguide3"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.85"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tfrguideA"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/extraWork"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tfrguide3"
+            app:layout_constraintRight_toLeftOf="@id/tfrguideA"
+            app:layout_constraintWidth_percent="0.4"
+            app:layout_constraintHeight_percent="0.08"
+            android:background="@color/colourMain"
+            android:textColor="#FFFFFF"
+            android:text="Extra Work"
+            android:textSize="18dp"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/submit_tasks"
+            app:layout_constraintLeft_toRightOf="@id/tfrguideA"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tfrguide3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintHeight_percent="0.08"
+            android:text="Submit"
+            android:textSize="18dp"
+            android:background="@color/colourMain"
+            android:textColor="#FFFFFF" />
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/taskfrag_progress"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="?android:attr/progressBarStyleLarge"
+            android:visibility="gone"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/question_frag"
+        android:elevation="3dp"/>
+
+</FrameLayout>

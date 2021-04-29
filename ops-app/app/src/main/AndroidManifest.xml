@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.demo.ccaspltrial">
+
+    <uses-feature
+        android:name="android.hardware.zcamera2"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ccaspl"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ccaspl_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".MaterialDelivered" />
+        <activity android:name=".MaterialIssues" />
+        <activity android:name=".Executive.SaveExeProfileImage" />
+        <activity
+            android:name=".Executive.ExecutiveProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Executive.TasksForOthers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RequestTraining"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Executive.ViewSiteImages"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Executive.ViewGroomingImages"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Executive.ViewTasks"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MaterialsRequired"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ImageGallery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Executive.ExecutiveHome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Sop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Certifications"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TrainingVideos"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SaveImage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomePage"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

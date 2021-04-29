@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Executive.TasksForOthers">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tasksforother_guidex1"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.08"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tasksforother_guidex2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.18"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tasksforother_guidex3"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.28"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tasksforother_guidex4"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.38"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tasksforother_guidex5"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <include
+        layout="@layout/header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tasksforother_guidex1"/>
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/taskforothers_siteSpinner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tasksforother_guidex1"
+        app:layout_constraintBottom_toTopOf="@id/tasksforother_guidex2"
+        app:hintText="Select Site"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/taskforothers_empSpinner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tasksforother_guidex2"
+        app:layout_constraintBottom_toTopOf="@id/tasksforother_guidex3"
+        app:hintText="Select Employee"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tasksforother_guidex3"
+        app:layout_constraintBottom_toTopOf="@id/tasksforother_guidex4"
+        android:id="@+id/tasksforothers_headingLayout"
+        android:background="@color/colourSecond"
+        android:visibility="gone">
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/headingLayout_guidey1"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.1"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/headingLayout_guidey2"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.8"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="@id/headingLayout_guidey1"
+            app:layout_constraintRight_toRightOf="@id/headingLayout_guidey1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="#909090"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/task_name_heading"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/headingLayout_guidey1"
+            app:layout_constraintRight_toLeftOf="@id/headingLayout_guidey2"
+            android:textSize="20dp"
+            android:text="Name"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="@id/headingLayout_guidey2"
+            app:layout_constraintRight_toRightOf="@id/headingLayout_guidey2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/colourSecond"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/task_time_heading"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/headingLayout_guidey2"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:text="Time"
+            android:textSize="20dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ListView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/taskforothers_listview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tasksforother_guidex4"
+        app:layout_constraintBottom_toTopOf="@id/tasksforother_guidex5"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/taskforothers_extrawork"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tasksforother_guidex5"
+        app:layout_constraintRight_toLeftOf="@id/tasksforothers_submit"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHeight_percent="0.08"
+        android:background="@color/colourMain"
+        android:textSize="20dp"
+        android:text="Extra Work"
+        android:textColor="#FFFFFF"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/tasksforothers_submit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tasksforother_guidex5"
+        app:layout_constraintLeft_toRightOf="@id/taskforothers_extrawork"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.08"
+        android:background="@color/colourMain"
+        android:textColor="#FFFFFF"
+        android:text="Submit"
+        android:textSize="20dp"
+        android:visibility="gone"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/exeExtraWorkFrag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tasksforother_guidex3"
+        android:elevation="3dp"/>
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/tasksforothers_progress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="?android:attr/progressBarStyleLarge"
+        android:visibility="gone"/>
+
+</android.support.constraint.ConstraintLayout>

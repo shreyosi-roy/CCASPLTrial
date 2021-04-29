@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/exe_group0"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/exe_profile"
+            android:title="Profile"/>
+
+    </group>
+
+    <group
+        android:id="@+id/exe_group1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/exe_tasks_done"
+            android:title="View site tasks"/>
+
+    </group>
+
+    <group
+        android:id="@+id/exe_group2"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/view_images"
+            android:title="View Images">
+
+            <menu>
+
+                <item
+                    android:id="@+id/grooming_images"
+                    android:title="Grooming images"/>
+
+                <item
+                    android:id="@+id/site_images"
+                    android:title="Site images"/>
+
+            </menu>
+
+        </item>
+
+    </group>
+
+    <group
+        android:id="@+id/exe_group3"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/tasksforothers"
+            android:title="Tasks for employees"/>
+
+    </group>
+
+    <group
+        android:id="@+id/exe_group4"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/exe_sync"
+            android:title="Sync data"/>
+
+    </group>
+
+    <group
+        android:id="@+id/exe_group5"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/exe_logout"
+            android:title="Logout"/>
+
+    </group>
+
+</menu>

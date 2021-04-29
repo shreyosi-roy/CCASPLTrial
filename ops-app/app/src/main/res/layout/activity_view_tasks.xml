@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Executive.ViewTasks">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vt_guidex1"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.08"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vt_guidex2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.18"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vt_guidex3"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.28"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vt_guidex4"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.38"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vt_guidex5"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.48"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vt_guidex6"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <include
+        layout="@layout/header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/vt_guidex1"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/vt_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vt_guidex1"
+        app:layout_constraintBottom_toTopOf="@id/vt_guidex2"
+        android:textSize="20dp"
+        android:hint="Select date"
+        android:paddingRight="20dp"
+        android:paddingLeft="15dp"
+        android:drawableRight="@drawable/calendar_icon"/>
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/vt_siteSpinner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vt_guidex2"
+        app:layout_constraintBottom_toTopOf="@id/vt_guidex3"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:hintText="Select Site"
+        android:visibility="gone"/>
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/vt_empSpinner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vt_guidex3"
+        app:layout_constraintBottom_toTopOf="@id/vt_guidex4"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:hintText="Select Employee"
+        android:visibility="gone"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vt_guidex4"
+        app:layout_constraintBottom_toTopOf="@id/vt_guidex5"
+        android:id="@+id/vt_header"
+        android:background="@color/colourSecond"
+        android:visibility="gone">
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vt_heading_guidey1"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.8"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/taskname_heading"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/vt_heading_guidey1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Tasks done"
+            android:textAlignment="center"/>
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="80dp"
+            app:layout_constraintLeft_toLeftOf="@id/vt_heading_guidey1"
+            app:layout_constraintRight_toRightOf="@id/vt_heading_guidey1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="#909090"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_heading"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/vt_heading_guidey1"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textAlignment="center"
+            android:text="Time"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ListView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/vt_listview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vt_guidex5"
+        app:layout_constraintBottom_toTopOf="@id/vt_guidex6"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/view_extra"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vt_guidex6"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.085"
+        android:background="@color/colourMain"
+        android:text="View Extra Work"
+        android:textColor="#FFFFFF"
+        android:textSize="19dp"
+        android:visibility="gone"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/viewExtra_frag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vt_guidex4"
+        app:layout_constraintBottom_toTopOf="@id/vt_guidex6"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintHeight_percent="0.5"/>
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/viewtasks_progress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="?android:attr/progressBarStyleLarge"
+        android:visibility="gone"/>
+
+</android.support.constraint.ConstraintLayout>

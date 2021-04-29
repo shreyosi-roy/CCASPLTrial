@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Executive.ExeExtraWorkFragment"
+    android:background="#DCECFA">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:clickable="true">
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeEwfrag_guidex1"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.3"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeEwfrag_guidex2"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.6"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeEwfrag_guidey1"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeEwfrag_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/exeEwfrag_guidex1"
+            android:text="Enter extra work done"
+            android:textSize="16dp"
+            android:paddingLeft="25dp"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeExtraWork_input"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/exeEwfrag_guidex1"
+            app:layout_constraintBottom_toTopOf="@id/exeEwfrag_guidex2"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:textSize="16dp"
+            android:backgroundTint="@color/colourMain"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/exeEwfrag_ok"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/exeEwfrag_guidex2"
+            app:layout_constraintRight_toLeftOf="@id/exeEwfrag_guidey1"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintHeight_percent="0.2"
+            android:textSize="16dp"
+            android:text="Ok"
+            android:textColor="#FFFFFF"
+            android:background="@color/colourMain"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/exeEwfrag_cancel"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/exeEwfrag_guidey1"
+            app:layout_constraintTop_toBottomOf="@id/exeEwfrag_guidex2"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintWidth_percent="0.3"
+            android:background="@color/colourMain"
+            android:textColor="#FFFFFF"
+            android:text="Cancel"
+            android:textSize="16dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

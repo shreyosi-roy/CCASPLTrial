@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Executive.ExecutiveProfile">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/exeprofile_guidex1"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.08"/>
+
+    <include
+        layout="@layout/header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/exeprofile_guidex1"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/exeinfo_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exeprofile_guidex1"
+        android:layout_marginTop="10dp"
+        android:visibility="visible">
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeinfolayout_guidex1"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.1"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeinfolayout_guidex2"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.2"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeinfolayout_guidex3"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.3"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeinfolayout_guidex4"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.4"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeinfolayout_guidex5"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeinfolayout_guidex6"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.6"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeinfolayout_guidex7"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.85"/>
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeinfolayout_guidey1"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.35"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/execode_heading"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="@id/exeinfolayout_guidey1"
+            app:layout_constraintBottom_toBottomOf="@id/exeinfolayout_guidex1"
+            android:text="Employee Code:"
+            android:textAlignment="viewEnd"
+            android:gravity="end"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/execode_tv"
+            app:layout_constraintLeft_toLeftOf="@id/exeinfolayout_guidey1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/exeinfolayout_guidex1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exename_heading"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/exeinfolayout_guidex1"
+            app:layout_constraintRight_toRightOf="@id/exeinfolayout_guidey1"
+            app:layout_constraintBottom_toBottomOf="@id/exeinfolayout_guidex2"
+            android:text="Name:"
+            android:textAlignment="viewEnd"
+            android:gravity="end"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exename_tv"
+            app:layout_constraintLeft_toLeftOf="@id/exeinfolayout_guidey1"
+            app:layout_constraintTop_toTopOf="@id/exeinfolayout_guidex1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/exeinfolayout_guidex2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exedesignation_heading"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/exeinfolayout_guidex2"
+            app:layout_constraintRight_toRightOf="@id/exeinfolayout_guidey1"
+            app:layout_constraintBottom_toBottomOf="@id/exeinfolayout_guidex3"
+            android:text="Designation:"
+            android:textAlignment="viewEnd"
+            android:gravity="end"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exedesignation_tv"
+            app:layout_constraintLeft_toLeftOf="@id/exeinfolayout_guidey1"
+            app:layout_constraintTop_toTopOf="@id/exeinfolayout_guidex2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/exeinfolayout_guidex3"
+            android:text="Executive"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exephno_heading"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/exeinfolayout_guidex3"
+            app:layout_constraintRight_toRightOf="@id/exeinfolayout_guidey1"
+            app:layout_constraintBottom_toBottomOf="@id/exeinfolayout_guidex4"
+            android:text="Phone No.:"
+            android:textAlignment="viewEnd"
+            android:gravity="end"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exephno_tv"
+            app:layout_constraintLeft_toLeftOf="@id/exeinfolayout_guidey1"
+            app:layout_constraintTop_toTopOf="@id/exeinfolayout_guidex3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/exeinfolayout_guidex4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exealtno_heading"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/exeinfolayout_guidex4"
+            app:layout_constraintRight_toRightOf="@id/exeinfolayout_guidey1"
+            app:layout_constraintBottom_toBottomOf="@id/exeinfolayout_guidex5"
+            android:text="Alternate No.:"
+            android:textAlignment="viewEnd"
+            android:gravity="end"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exealtno_tv"
+            app:layout_constraintLeft_toLeftOf="@id/exeinfolayout_guidey1"
+            app:layout_constraintTop_toTopOf="@id/exeinfolayout_guidex4"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/exeinfolayout_guidex5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeemail_heading"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/exeinfolayout_guidex5"
+            app:layout_constraintRight_toRightOf="@id/exeinfolayout_guidey1"
+            app:layout_constraintBottom_toBottomOf="@id/exeinfolayout_guidex6"
+            android:text="Email:"
+            android:textAlignment="viewEnd"
+            android:gravity="end"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeemail_tv"
+            app:layout_constraintLeft_toLeftOf="@id/exeinfolayout_guidey1"
+            app:layout_constraintTop_toTopOf="@id/exeinfolayout_guidex5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/exeinfolayout_guidex6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeaddress_heading"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/exeinfolayout_guidex6"
+            app:layout_constraintRight_toRightOf="@id/exeinfolayout_guidey1"
+            app:layout_constraintBottom_toBottomOf="@id/exeinfolayout_guidex7"
+            android:text="Address:"
+            android:textAlignment="viewEnd"
+            android:gravity="end"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exeaddress_tv"
+            app:layout_constraintLeft_toLeftOf="@id/exeinfolayout_guidey1"
+            app:layout_constraintTop_toTopOf="@id/exeinfolayout_guidex6"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/exeinfolayout_guidex7"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/exeimage_btn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/exeinfolayout_guidex7"
+            app:layout_constraintWidth_percent="0.55"
+            app:layout_constraintHeight_percent="0.07"
+            android:background="@color/colourMain"
+            android:textColor="#FFFFFF"
+            android:text="Click Profile Image"
+            android:textSize="18dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
